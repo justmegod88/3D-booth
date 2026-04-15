@@ -720,8 +720,8 @@
       border-radius:18px;
     }
     #detailPage .inlineCamBtn .cam-icon{
-      width:24px;
-      height:24px;
+      width:30px;
+      height:30px;
       display:block;
       stroke:currentColor;
       stroke-width:2.1;
@@ -965,23 +965,23 @@
       max-width:860px;
     }
     #detailPage .compactControl{
-      width:216px;
+      width:264px;
       right:18px;
       bottom:18px;
       gap:10px;
     }
     #detailPage .compactLabel{
-      font-size:16px;
-      padding:6px 14px;
+      font-size:20px;
+      padding:8px 18px;
     }
     #detailPage .switchWrap{
-      width:216px;
-      padding:5px;
-      gap:5px;
+      width:264px;
+      padding:6px;
+      gap:6px;
     }
     #detailPage .pillBtn{
-      height:48px;
-      font-size:15px;
+      height:58px;
+      font-size:19px;
     }
     #detailPage .spec{
       width:min(100%, 920px);
@@ -997,34 +997,34 @@
       accent-color:#1e88f5;
     }
     #detailPage input[type="range"]::-webkit-slider-runnable-track{
-      height:8px;
+      height:14px;
       border-radius:999px;
     }
     #detailPage input[type="range"]::-webkit-slider-thumb{
       -webkit-appearance:none;
       appearance:none;
-      width:24px;
-      height:24px;
+      width:30px;
+      height:30px;
       border-radius:50%;
       background:#fff;
-      border:3px solid #1e88f5;
-      margin-top:-8px;
+      border:4px solid #1e88f5;
+      margin-top:-10px;
       box-shadow:0 4px 10px rgba(30,136,245,.18);
     }
     #detailPage input[type="range"]::-moz-range-track{
-      height:8px;
+      height:14px;
       border-radius:999px;
     }
     #detailPage input[type="range"]::-moz-range-thumb{
-      width:24px;
-      height:24px;
+      width:30px;
+      height:30px;
       border-radius:50%;
       background:#fff;
-      border:3px solid #1e88f5;
+      border:4px solid #1e88f5;
       box-shadow:0 4px 10px rgba(30,136,245,.18);
     }
     #detailPage .scale{
-      font-size:18px;
+      font-size:20px;
       padding:4px 2px 0;
     }
     #detailPage .messageBox{
@@ -1584,10 +1584,10 @@
       const pupilRight = centerX + pupilR;
 
       eyeOverlay.innerHTML = `
-        <line x1="${pupilLeft}" y1="${centerY + 6}" x2="${pupilLeft}" y2="205" stroke="#15679c" stroke-width="6" stroke-dasharray="14 12" />
-        <line x1="${pupilRight}" y1="${centerY + 6}" x2="${pupilRight}" y2="205" stroke="#15679c" stroke-width="6" stroke-dasharray="14 12" />
-        <circle cx="${centerX}" cy="${centerY}" r="${pupilR}" fill="rgba(5,8,18,0.92)" stroke="#0d62b6" stroke-width="6"></circle>
-        <circle cx="${centerX}" cy="${centerY}" r="${opticR}" fill="none" stroke="rgba(13,98,182,0.88)" stroke-width="6"></circle>
+        <line x1="${pupilLeft}" y1="${centerY + 6}" x2="${pupilLeft}" y2="205" stroke="#15679c" stroke-width="5" stroke-dasharray="13 12" />
+        <line x1="${pupilRight}" y1="${centerY + 6}" x2="${pupilRight}" y2="205" stroke="#15679c" stroke-width="5" stroke-dasharray="13 12" />
+        <circle cx="${centerX}" cy="${centerY}" r="${pupilR}" fill="rgba(5,8,18,0.92)" stroke="#0d62b6" stroke-width="5"></circle>
+        <circle cx="${centerX}" cy="${centerY}" r="${opticR}" fill="none" stroke="rgba(13,98,182,0.88)" stroke-width="5"></circle>
       `;
     }
 
@@ -1614,9 +1614,9 @@
             <stop offset="100%" stop-color="rgba(28,96,191,0.26)"></stop>
           </radialGradient>
         </defs>
-        <line x1="${pupilLeft}" y1="15" x2="${pupilLeft}" y2="${centerY + 4}" stroke="#15679c" stroke-width="6" stroke-dasharray="14 12" />
-        <line x1="${pupilRight}" y1="15" x2="${pupilRight}" y2="${centerY + 4}" stroke="#15679c" stroke-width="6" stroke-dasharray="14 12" />
-        <circle cx="${centerX}" cy="${centerY}" r="${opticR}" fill="url(#opticOuterGrad)" stroke="#1870c9" stroke-width="6"></circle>
+        <line x1="${pupilLeft}" y1="15" x2="${pupilLeft}" y2="${centerY + 4}" stroke="#15679c" stroke-width="5" stroke-dasharray="13 12" />
+        <line x1="${pupilRight}" y1="15" x2="${pupilRight}" y2="${centerY + 4}" stroke="#15679c" stroke-width="5" stroke-dasharray="13 12" />
+        <circle cx="${centerX}" cy="${centerY}" r="${opticR}" fill="url(#opticOuterGrad)" stroke="#1870c9" stroke-width="5"></circle>
         <circle cx="${centerX}" cy="${centerY}" r="${opticR * 0.74}" fill="url(#opticMidGrad)"></circle>
         <circle cx="${centerX}" cy="${centerY}" r="${opticR * 0.42}" fill="url(#opticCoreGrad)"></circle>
       `;
