@@ -606,26 +606,28 @@
       display:none;
       align-items:center;
       justify-content:center;
-      padding:18px;
+      padding:12px;
       z-index:1000;
     }
     #detailPage .modalBack.open{display:flex}
     #detailPage .modalCard{
-      max-width:920px;
-      padding:18px;
+      width:min(1040px, calc(100vw - 24px));
+      max-width:min(1040px, calc(100vw - 24px));
+      padding:24px;
       position:relative;
+      border-radius:34px;
     }
-    #detailPage .modalClose{position:absolute; right:16px; top:16px}
+    #detailPage .modalClose{position:absolute; right:20px; top:20px; min-width:112px; height:64px; border-radius:999px; font-size:28px; padding:0 26px}
     #detailPage .visionGrid{
       display:grid;
-      grid-template-columns:1fr 320px;
-      gap:12px;
+      grid-template-columns:minmax(0, 1fr) 360px;
+      gap:18px;
       align-items:start;
       margin-top:8px;
     }
     #detailPage .screen{
       position:relative;
-      min-height:320px;
+      min-height:620px;
       border:1px solid #d9e2ee;
       border-radius:18px;
       overflow:hidden;
@@ -720,8 +722,8 @@
       border-radius:18px;
     }
     #detailPage .inlineCamBtn .cam-icon{
-      width:30px;
-      height:30px;
+      width:42px;
+      height:42px;
       display:block;
       stroke:currentColor;
       stroke-width:2.1;
@@ -993,11 +995,11 @@
       font-size:32px;
     }
     #detailPage input[type="range"]{
-      height:52px;
+      height:68px;
       accent-color:#1e88f5;
     }
     #detailPage input[type="range"]::-webkit-slider-runnable-track{
-      height:14px;
+      height:24px;
       border-radius:999px;
     }
     #detailPage input[type="range"]::-webkit-slider-thumb{
@@ -1008,24 +1010,24 @@
       border-radius:50%;
       background:#fff;
       border:4px solid #1e88f5;
-      margin-top:-10px;
+      margin-top:-9px;
       box-shadow:0 4px 10px rgba(30,136,245,.18);
     }
     #detailPage input[type="range"]::-moz-range-track{
-      height:14px;
+      height:24px;
       border-radius:999px;
     }
     #detailPage input[type="range"]::-moz-range-thumb{
-      width:30px;
-      height:30px;
+      width:42px;
+      height:42px;
       border-radius:50%;
       background:#fff;
       border:4px solid #1e88f5;
       box-shadow:0 4px 10px rgba(30,136,245,.18);
     }
     #detailPage .scale{
-      font-size:20px;
-      padding:4px 2px 0;
+      font-size:22px;
+      padding:6px 2px 0;
     }
     #detailPage .messageBox{
       width:min(100%, 920px);
@@ -1229,8 +1231,8 @@
     <div class="modalBack" id="visionModal">
       <div class="modalCard">
         <button class="btn modalClose" id="closeVisionBtn" type="button">닫기</button>
-        <h3>Vision Simulation</h3>
-        <div class="muted">동공과 광학부 사이즈에 따른 시야 시뮬레이션</div>
+        <h3 style="font-size:42px; margin:6px 0 10px; line-height:1.1;">Vision Simulation</h3>
+        <div class="muted" style="font-size:20px; line-height:1.45; margin-bottom:8px;">동공과 광학부 사이즈에 따른 시야 시뮬레이션</div>
 
         <div class="visionGrid">
           <div class="screen" id="screen">
