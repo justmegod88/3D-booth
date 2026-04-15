@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=1080, height=1920, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>ACUVUE Product | 183가지 광학부</title>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <style>
@@ -22,6 +22,9 @@
     html,body{
       margin:0;
       padding:0;
+      width:1080px;
+      height:1920px;
+      overflow:hidden;
       background:linear-gradient(180deg,#eef4fb 0%, #f7f9fc 60%, #f3f6fb 100%);
       font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Segoe UI",Arial,sans-serif;
       color:var(--text);
@@ -41,10 +44,10 @@
     }
 
     .wrap{
-      width:min(96vw,1040px);
-      max-width:1040px;
-      margin:0 auto;
-      padding:32px 26px 72px;
+      width:100%;
+      max-width:none;
+      margin:0;
+      padding:26px 30px 28px;
     }
 
     .top-title-box{
@@ -52,27 +55,29 @@
       background:linear-gradient(180deg,#082f80 0%, #062a72 100%);
       color:#fff;
       border-radius:34px 34px 0 0;
-      padding:24px 28px;
+      padding:22px 28px;
       text-align:center;
-      font-size:36px;
-      line-height:1.15;
+      font-size:32px;
+      line-height:1.2;
       font-weight:900;
       letter-spacing:-.03em;
-      box-shadow:0 16px 36px rgba(6,42,114,.18);
-      margin-bottom:0;
+      box-shadow:none;
+      margin:0;
     }
 
-    .top-cards{margin-bottom:30px}
+    .top-cards{margin-bottom:24px}
     .menu-card{
       background:var(--card);
       border:1.5px solid #dbe5f1;
+      border-top:none;
       border-radius:0 0 34px 34px;
-      padding:28px 30px 26px;
+      padding:28px 28px 24px;
       box-shadow:var(--shadow);
       min-height:170px;
       cursor:pointer;
       transition:.2s ease;
       width:100%;
+      margin-top:0;
     }
     .menu-card.active{
       border-color:#b8d2f6;
@@ -89,16 +94,16 @@
       word-break:keep-all;
     }
     .menu-title{
-      font-size:52px;
-      line-height:1.2;
+      font-size:58px;
+      line-height:1.12;
       font-weight:900;
-      letter-spacing:-.03em;
+      letter-spacing:-.04em;
       color:#102a46;
-      margin-bottom:10px;
+      margin-bottom:18px;
       word-break:keep-all;
     }
     .menu-sub{
-      font-size:28px;
+      font-size:24px;
       color:#9aa6b4;
       line-height:1.4;
       font-weight:700;
@@ -107,17 +112,17 @@
     .hero-3d{
       background:linear-gradient(180deg,#f9fbff 0%, #f2f6fc 100%);
       border:1.5px solid #dce5f1;
-      border-radius:40px;
+      border-radius:34px;
       box-shadow:var(--shadow);
-      padding:28px 28px 34px;
-      margin-bottom:22px;
+      padding:28px 28px 28px;
+      margin-bottom:14px;
       position:relative;
       z-index:1;
       overflow:hidden;
     }
     .hero-viewer{
       width:100%;
-      min-height:1080px;
+      min-height:1140px;
       border-radius:24px;
       display:flex;
       align-items:center;
@@ -130,19 +135,19 @@
     }
     model-viewer{
       width:100%;
-      height:1080px;
+      height:1140px;
       background:transparent;
       --poster-color:transparent;
       display:block;
     }
 
     .powermap-panel{
-      margin-top:16px;
+      margin-top:22px;
       padding:0 10px;
       transition:.2s ease;
     }
     .powermap-title{
-      font-size:30px;
+      font-size:17px;
       font-weight:900;
       letter-spacing:-.03em;
       color:#102a46;
@@ -208,22 +213,35 @@
     .tick-3{left:78%}
 
     .hero-buttons{
-      display:grid;
-      grid-template-columns:1.15fr 1.05fr 116px 116px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
       gap:18px;
-      margin-top:34px;
+      margin-top:28px;
       position:relative;
       z-index:2;
       width:100%;
+    }
+    .hero-buttons-left,
+    .hero-buttons-right{
+      display:flex;
       align-items:center;
+      gap:18px;
+      min-width:0;
+    }
+    .hero-buttons-left{
+      flex:1 1 auto;
+    }
+    .hero-buttons-right{
+      flex:0 0 auto;
     }
     .round-btn,.mode-btn{
-      height:116px;
-      border-radius:30px;
+      height:112px;
+      border-radius:28px;
       border:1.5px solid #d3deec;
       background:#fff;
       color:#13314c;
-      font-size:32px;
+      font-size:30px;
       font-weight:900;
       letter-spacing:-.02em;
       box-shadow:var(--shadow-soft);
@@ -234,15 +252,16 @@
       min-width:0;
     }
     .round-btn{
-      font-size:52px;
+      font-size:46px;
       display:flex;
       align-items:center;
       justify-content:center;
-      width:100%;
+      width:112px;
+      flex:0 0 112px;
     }
     .mode-btn{
-      width:100%;
-      padding:0 22px;
+      flex:1 1 0;
+      padding:0 18px;
       white-space:nowrap;
     }
     .mode-btn.active{
@@ -255,7 +274,7 @@
     .main-footnote{
       text-align:center;
       color:#5b6470;
-      font-size:24px;
+      font-size:22px;
       line-height:1.45;
       font-weight:700;
       letter-spacing:-.02em;
@@ -268,14 +287,12 @@
       min-height:100vh;
     }
     #detailPage .detail-wrap{
-      width:min(96vw,1040px);
-      max-width:1040px;
+      max-width:980px;
       margin:0 auto;
-      padding:34px 26px 82px;
+      padding:22px 16px 52px;
       display:flex;
       flex-direction:column;
-      gap:28px;
-      position:relative;
+      gap:18px;
     }
     #detailPage .hero,
     #detailPage .card,
@@ -284,11 +301,11 @@
       width:100%;
       background:#ffffff;
       border:1.5px solid #d9e2ee;
-      border-radius:40px;
+      border-radius:30px;
       box-shadow:0 14px 34px rgba(36,68,110,.08);
     }
     #detailPage .hero{
-      padding:32px 34px 36px;
+      padding:22px 24px 24px;
       position:relative;
       overflow:hidden;
     }
@@ -305,21 +322,40 @@
     }
     #detailPage .brand{
       display:block;
-      margin:-32px -34px 24px;
-      padding:24px 30px;
-      border-radius:40px 40px 0 0;
+      margin:-22px -24px 18px;
+      padding:14px 20px;
+      border-radius:30px 30px 0 0;
       background:linear-gradient(180deg,#082f80 0%, #062a72 100%);
       color:#fff;
-      font-size:30px;
+      font-size:17px;
       font-weight:900;
       letter-spacing:-.02em;
       text-align:center;
       box-shadow:none;
       border:none;
     }
+    #detailPage .detail-back-btn{
+      position:absolute;
+      top:26px;
+      right:24px;
+      width:88px;
+      height:88px;
+      border-radius:999px;
+      border:1.5px solid #d3deec;
+      background:#fff;
+      color:#13314c;
+      font-size:42px;
+      font-weight:900;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:var(--shadow-soft);
+      cursor:pointer;
+      z-index:6;
+    }
     #detailPage .heroTitle{
       margin:0;
-      font-size:clamp(34px,3vw,44px);
+      font-size:clamp(17px,2vw,22px);
       line-height:1.42;
       letter-spacing:-.035em;
       color:#213d63;
@@ -335,15 +371,15 @@
       font-weight:800;
       line-height:1.5;
     }
-    #detailPage .card{padding:34px 34px 40px}
+    #detailPage .card{padding:22px 22px 24px}
     #detailPage .sliderCard > h3{display:none}
     #detailPage .spec{
       display:flex;
       flex-direction:column;
-      gap:24px;
-      margin-top:24px;
-      margin-bottom:20px;
-      width:min(100%,760px);
+      gap:16px;
+      margin-top:14px;
+      margin-bottom:10px;
+      width:min(100%,520px);
     }
     #detailPage .sliderBlock{display:flex; flex-direction:column; gap:8px}
     #detailPage .sliderTop{
@@ -353,15 +389,15 @@
       gap:12px;
     }
     #detailPage .label{
-      font-size:32px;
+      font-size:18px;
       font-weight:900;
       color:#5f748f;
       letter-spacing:-.03em;
     }
     #detailPage .value{
-      min-width:180px;
+      min-width:108px;
       text-align:right;
-      font-size:32px;
+      font-size:18px;
       font-weight:900;
       color:#156bc4;
       letter-spacing:-.03em;
@@ -372,13 +408,13 @@
       justify-content:space-between;
       padding:0 2px;
       color:#6f8097;
-      font-size:38px;
+      font-size:12px;
       font-weight:900;
       letter-spacing:-.02em;
     }
     #detailPage .visualStage{display:flex; justify-content:center; margin-top:6px}
     #detailPage .visualStack{
-      width:min(100%,900px);
+      width:min(100%,580px);
       display:flex;
       flex-direction:column;
       align-items:center;
@@ -389,12 +425,12 @@
       display:flex;
       flex-direction:column;
       align-items:center;
-      gap:18px;
+      gap:10px;
     }
     #detailPage .eyePanel,
     #detailPage .lensPanel{
       position:relative;
-      width:min(100%,760px);
+      width:min(100%,440px);
       border-radius:34px;
       background:linear-gradient(180deg,#ffffff 0%, #fbfcfe 100%);
       border:1.5px solid #edf2f8;
@@ -403,12 +439,12 @@
       display:flex;
       justify-content:center;
       align-items:center;
-      padding:18px 18px;
+      padding:10px 10px;
     }
     #detailPage .eyeBase,
     #detailPage .lensBase{
       width:100%;
-      max-width:700px;
+      max-width:400px;
       height:auto;
       display:block;
     }
@@ -422,7 +458,7 @@
 
     /* 3. ON/OFF 버튼 우측 하단 이동 + 183개 광학부 위로 */
     #detailPage .compactControl{
-      width:260px;
+      width:170px;
       background:transparent;
       border:none;
       border-radius:0;
@@ -433,19 +469,19 @@
       align-items:flex-end;
       gap:6px;
       position:absolute;
-      right:16px;
-      bottom:14px;
+      right:10px;
+      bottom:8px;
       z-index:5;
     }
    
     #detailPage .compactLabel{
-      font-size:38px;
+      font-size:13px;
       font-weight:900;
       color:#0f5aa6;
       letter-spacing:-.03em;
       line-height:1.1;
       text-align:right;
-      padding:8px 16px;
+      padding:4px 10px;
       background:rgba(255,255,255,.92);
       border:1px solid rgba(217,226,238,.9);
       border-radius:999px;
@@ -454,7 +490,7 @@
 
     
     #detailPage .switchWrap{
-      width:260px;
+      width:170px;
       background:rgba(255,255,255,.96);
       border:1.5px solid #d9e2ee;
       border-radius:999px;
@@ -467,8 +503,8 @@
     #detailPage .pillBtn{
       border:none;
       border-radius:999px;
-      height:58px;
-      font-size:18px;
+      height:38px;
+      font-size:12px;
       font-weight:900;
       letter-spacing:-.02em;
       cursor:pointer;
@@ -483,17 +519,17 @@
     }
 
     #detailPage .messageBox{
-      width:min(100%,760px);
-      border-radius:34px;
+      width:min(100%,520px);
+      border-radius:28px;
       background:linear-gradient(180deg,#f4f8ff 0%, #edf4ff 100%);
       border:1.5px solid #d7e2f1;
       box-shadow:0 10px 24px rgba(36,68,110,.06), inset 0 1px 0 rgba(255,255,255,.95);
-      padding:28px 30px 30px;
+      padding:18px 20px 20px;
       text-align:center;
     }
     #detailPage .messageTitle{
       margin:0;
-      font-size:38px;
+      font-size:22px;
       line-height:1.48;
       font-weight:900;
       color:#234767;
@@ -501,16 +537,16 @@
     }
     #detailPage .messageTitle strong,
     #detailPage .messageTitle .emphasisLine{color:#0f5aa6; font-weight:900}
-    #detailPage .visionCard{padding:24px 28px; border-radius:34px}
+    #detailPage .visionCard{padding:16px 18px; border-radius:28px}
     #detailPage .visionTrigger{
       display:grid;
-      grid-template-columns:1fr 230px;
-      gap:20px;
+      grid-template-columns:1fr 154px;
+      gap:14px;
       align-items:center;
     }
     #detailPage .visionTrigger h3{
       margin:0 0 4px;
-      font-size:42px;
+      font-size:26px;
       line-height:1.04;
       letter-spacing:-.04em;
       color:#213d63;
@@ -519,18 +555,18 @@
     #detailPage .muted{
       color:#6d7e95;
       font-weight:800;
-      font-size:38px;
+      font-size:13px;
       line-height:1.42;
     }
     #detailPage .btn{
       border:1px solid #d9e2ee;
       background:#fff;
-      border-radius:24px;
-      padding:18px 20px;
+      border-radius:18px;
+      padding:12px 16px;
       font-weight:900;
       cursor:pointer;
       color:#234767;
-      font-size:28px;
+      font-size:16px;
     }
     #detailPage .btn.primary{
       background:linear-gradient(180deg,#156bc4 0%, #0f61b4 100%);
@@ -538,25 +574,25 @@
       color:#fff;
       box-shadow:0 10px 22px rgba(18,97,180,.20);
     }
-    #detailPage #openVisionBtn{min-height:120px; white-space:normal; line-height:1.35; font-size:24px}
+    #detailPage #openVisionBtn{min-height:82px; white-space:normal; line-height:1.4; font-size:15px}
     #detailPage .pageFootnote{
       text-align:center;
       color:#73839a;
-      font-size:22px;
+      font-size:12px;
       font-weight:900;
       letter-spacing:-.02em;
       padding-top:2px;
     }
 
     #detailPage .references-space{
-      margin-top:8px;
+      margin-top:4px;
       text-align:left;
       color:#9aa5b5;
-      font-size:16px;
+      font-size:10px;
       line-height:1.55;
       font-weight:700;
       letter-spacing:-.01em;
-      min-height:120px;
+      min-height:72px;
       padding:0 6px 4px;
       white-space:pre-line;
     }
@@ -664,7 +700,7 @@
       background:#fafbfc;
       color:#73839a;
       font-weight:900;
-      font-size:38px;
+      font-size:13px;
       line-height:1.55;
       position:relative;
     }
@@ -715,51 +751,6 @@
       padding:0 8px;
     }
 
-
-
-    .icon-btn{
-      height:116px;
-      width:116px;
-      border-radius:32px;
-      border:1.5px solid #d3deec;
-      background:#fff;
-      color:#13314c;
-      font-size:54px;
-      font-weight:900;
-      box-shadow:var(--shadow-soft);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      cursor:pointer;
-      -webkit-appearance:none;
-      appearance:none;
-    }
-    .detail-back-wrap{
-      display:flex;
-      justify-content:flex-end;
-      margin-top:-6px;
-      margin-bottom:4px;
-    }
-    #detailBackBtn{
-      height:104px;
-      width:104px;
-      border-radius:50%;
-      border:2px solid #c6d2e3;
-      background:#fff;
-      color:#13314c;
-      font-size:48px;
-      font-weight:900;
-      box-shadow:var(--shadow-soft);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      cursor:pointer;
-    }
-    @media (orientation: portrait){
-      .wrap, #detailPage .detail-wrap{ width:min(96vw,1040px); }
-      .hero-viewer, model-viewer{ min-height:1080px; height:1080px; }
-    }
-
     @media (max-width:720px){
       .top-title-box{
         font-size:18px;
@@ -778,9 +769,10 @@
       .powermap-bar-wrap{height:20px}
       .powermap-bar{height:13px}
       .powermap-tick{height:11px; width:1.25px}
-      .hero-buttons{grid-template-columns:60px 1fr 1fr; gap:8px}
+      .hero-buttons{gap:8px}
+      .hero-buttons-left,.hero-buttons-right{gap:8px}
       .round-btn,.mode-btn{height:54px; border-radius:18px; font-size:13px}
-      .round-btn{font-size:23px}
+      .round-btn{font-size:23px; width:54px; flex:0 0 54px}
       .main-footnote{font-size:11px}
 
       #detailPage .detail-wrap{padding:16px 12px 42px}
@@ -819,7 +811,7 @@
       }
 
       #detailPage .messageBox{width:min(100%,100%); border-radius:24px; padding:16px 14px 18px; background:linear-gradient(180deg,#f3f8ff 0%, #ebf3ff 100%)}
-      #detailPage .messageTitle{font-size:38px; line-height:1.48}
+      #detailPage .messageTitle{font-size:13px; line-height:1.48}
       #detailPage .visionTrigger{grid-template-columns:1fr 118px; gap:12px}
       #detailPage .visionTrigger h3{font-size:22px}
       #detailPage .muted{font-size:10px; line-height:1.38}
@@ -839,6 +831,14 @@
         margin-top:10px;
       }
     }
+
+    /* kiosk portrait sizing override */
+    #mainPage .wrap{display:flex; flex-direction:column; height:1920px;}
+    #mainPage .top-cards{flex:0 0 auto;}
+    #mainPage .hero-3d{flex:1 1 auto; display:flex; flex-direction:column;}
+    #mainPage .hero-viewer{flex:1 1 auto;}
+    #mainPage .menu-card{position:relative; top:-1px;}
+
   </style>
 </head>
 <body>
@@ -890,10 +890,14 @@
         </div>
 
         <div class="hero-buttons">
-          <button class="mode-btn active" id="transparentBtn" type="button">투명 렌즈 모드</button>
-          <button class="mode-btn" id="powerBtn" type="button">렌즈 파워 MAP</button>
-          <button class="icon-btn" id="resetBtn" type="button">↺</button>
-          <button class="icon-btn" id="mainBackBtn" type="button" aria-label="뒤로가기">←</button>
+          <div class="hero-buttons-left">
+            <button class="mode-btn active" id="transparentBtn" type="button">투명 렌즈 모드</button>
+            <button class="mode-btn" id="powerBtn" type="button">렌즈 파워 MAP</button>
+          </div>
+          <div class="hero-buttons-right">
+            <button class="round-btn" id="resetBtn" type="button" aria-label="초기화" title="초기화">↺</button>
+            <button class="round-btn" id="mainBackBtn" type="button" aria-label="뒤로가기" title="뒤로가기">←</button>
+          </div>
         </div>
       </section>
 
@@ -903,7 +907,6 @@
 
   <section id="detailPage" class="page" aria-hidden="true">
     <div class="detail-wrap">
-      <div class="detail-back-wrap"><button id="detailBackBtn" type="button" aria-label="뒤로가기">←</button></div>
       <svg width="0" height="0" style="position:absolute">
         <filter id="fishbowlFilter" x="-20%" y="-20%" width="140%" height="140%">
           <feTurbulence type="fractalNoise" baseFrequency="0.008" numOctaves="1" seed="2" result="noise"></feTurbulence>
@@ -912,6 +915,7 @@
       </svg>
 
       <section class="hero">
+        <button class="detail-back-btn" id="detailBackBtn" type="button" aria-label="뒤로가기" title="뒤로가기">←</button>
         <div class="brand">아큐브 183개 동공 사이즈별 광학부</div>
         <h1 class="heroTitle">
           <span class="accent">원용도수</span>와 <span class="accent">가입도</span>에 따라 달라지는 <span class="accent">동공</span>.
@@ -1039,14 +1043,14 @@
   <script>
     const viewer = document.getElementById('lensViewer');
     const resetBtn = document.getElementById('resetBtn');
+    const mainBackBtn = document.getElementById('mainBackBtn');
+    const detailBackBtn = document.getElementById('detailBackBtn');
     const transparentBtn = document.getElementById('transparentBtn');
     const powerBtn = document.getElementById('powerBtn');
     const card1 = document.getElementById('card1');
     const powermapPanel = document.getElementById('powermapPanel');
     const mainPage = document.getElementById('mainPage');
     const detailPage = document.getElementById('detailPage');
-    const mainBackBtn = document.getElementById('mainBackBtn');
-    const detailBackBtn = document.getElementById('detailBackBtn');
 
     const MODE_CONFIG = {
       transparent: { src: 'lens_clear.glb', panel: 'none' },
@@ -1137,15 +1141,23 @@
     transparentBtn.addEventListener('click', () => setMode('transparent'));
     powerBtn.addEventListener('click', () => setMode('power'));
     resetBtn.addEventListener('click', resetViewer);
-    mainBackBtn.addEventListener('click', () => {
-      if (window.history.length > 1) history.back();
-      else location.hash = '';
-    });
-    detailBackBtn.addEventListener('click', () => {
-      if (visionModal.classList.contains('open')) {
-        visionModal.classList.remove('open');
-        document.body.classList.remove('page-lock');
-        stopCamera();
+    function goBack() {
+      if (location.hash === '#card1') {
+        history.back();
+        setTimeout(() => {
+          if (location.hash === '#card1') location.hash = '';
+        }, 10);
+      } else if (history.length > 1) {
+        history.back();
+      }
+    }
+    if (mainBackBtn) mainBackBtn.addEventListener('click', goBack);
+    if (detailBackBtn) detailBackBtn.addEventListener('click', () => {
+      if (location.hash === '#card1') {
+        history.back();
+        setTimeout(() => {
+          if (location.hash === '#card1') location.hash = '';
+        }, 10);
       } else {
         location.hash = '';
       }
