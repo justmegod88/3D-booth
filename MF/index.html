@@ -1081,7 +1081,57 @@
       }
     }
 
-  </style>
+  
+    /* hard overrides: popup width + native range thickness */
+    #detailPage .modalBack{
+      padding:0 10px !important;
+    }
+    #detailPage .modalCard{
+      width:97vw !important;
+      max-width:97vw !important;
+      padding:24px 22px 18px !important;
+    }
+    #detailPage .visionGrid{
+      grid-template-columns:1fr !important;
+      gap:16px !important;
+    }
+    #detailPage .screen{
+      width:100% !important;
+      min-height:520px !important;
+      aspect-ratio:16 / 8.8 !important;
+    }
+    #detailPage .screen video,
+    #detailPage .screen img{
+      width:100% !important;
+      height:100% !important;
+      object-fit:cover !important;
+    }
+    #detailPage .explain{
+      font-size:15px !important;
+      line-height:1.55 !important;
+      padding:16px 16px 18px !important;
+    }
+    #detailPage .modalClose{
+      right:18px !important;
+      top:18px !important;
+    }
+
+    /* make the native range visibly much thicker on Safari/Chrome */
+    #detailPage input[type="range"]{
+      -webkit-appearance:auto !important;
+      appearance:auto !important;
+      accent-color:#1e88f5 !important;
+      background:transparent !important;
+      height:96px !important;
+      transform:scaleY(2.9) !important;
+      transform-origin:center center !important;
+      margin:24px 0 14px !important;
+    }
+    #detailPage .sliderBlock{
+      gap:16px !important;
+    }
+
+</style>
 </head>
 <body>
   <section id="mainPage" class="page active">
