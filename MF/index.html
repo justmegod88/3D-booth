@@ -41,34 +41,35 @@
     }
 
     .wrap{
-      max-width:980px;
+      width:min(96vw,1040px);
+      max-width:1040px;
       margin:0 auto;
-      padding:18px 14px 40px;
+      padding:32px 26px 72px;
     }
 
     .top-title-box{
       width:100%;
       background:linear-gradient(180deg,#082f80 0%, #062a72 100%);
       color:#fff;
-      border-radius:22px 22px 0 0;
-      padding:14px 18px;
+      border-radius:34px 34px 0 0;
+      padding:24px 28px;
       text-align:center;
-      font-size:20px;
-      line-height:1.2;
+      font-size:36px;
+      line-height:1.15;
       font-weight:900;
       letter-spacing:-.03em;
-      box-shadow:0 10px 24px rgba(6,42,114,.18);
+      box-shadow:0 16px 36px rgba(6,42,114,.18);
       margin-bottom:0;
     }
 
-    .top-cards{margin-bottom:18px}
+    .top-cards{margin-bottom:30px}
     .menu-card{
       background:var(--card);
       border:1.5px solid #dbe5f1;
-      border-radius:0 0 22px 22px;
-      padding:16px 18px 14px;
+      border-radius:0 0 34px 34px;
+      padding:28px 30px 26px;
       box-shadow:var(--shadow);
-      min-height:86px;
+      min-height:170px;
       cursor:pointer;
       transition:.2s ease;
       width:100%;
@@ -88,7 +89,7 @@
       word-break:keep-all;
     }
     .menu-title{
-      font-size:22px;
+      font-size:52px;
       line-height:1.2;
       font-weight:900;
       letter-spacing:-.03em;
@@ -97,7 +98,7 @@
       word-break:keep-all;
     }
     .menu-sub{
-      font-size:15px;
+      font-size:28px;
       color:#9aa6b4;
       line-height:1.4;
       font-weight:700;
@@ -106,17 +107,17 @@
     .hero-3d{
       background:linear-gradient(180deg,#f9fbff 0%, #f2f6fc 100%);
       border:1.5px solid #dce5f1;
-      border-radius:28px;
+      border-radius:40px;
       box-shadow:var(--shadow);
-      padding:18px 18px 22px;
-      margin-bottom:10px;
+      padding:28px 28px 34px;
+      margin-bottom:22px;
       position:relative;
       z-index:1;
       overflow:hidden;
     }
     .hero-viewer{
       width:100%;
-      min-height:460px;
+      min-height:1080px;
       border-radius:24px;
       display:flex;
       align-items:center;
@@ -129,7 +130,7 @@
     }
     model-viewer{
       width:100%;
-      height:460px;
+      height:1080px;
       background:transparent;
       --poster-color:transparent;
       display:block;
@@ -141,7 +142,7 @@
       transition:.2s ease;
     }
     .powermap-title{
-      font-size:17px;
+      font-size:30px;
       font-weight:900;
       letter-spacing:-.03em;
       color:#102a46;
@@ -207,35 +208,22 @@
     .tick-3{left:78%}
 
     .hero-buttons{
-      display:flex;
-      justify-content:space-between;
-      gap:12px;
-      margin-top:16px;
+      display:grid;
+      grid-template-columns:1.15fr 1.05fr 116px 116px;
+      gap:18px;
+      margin-top:34px;
       position:relative;
       z-index:2;
       width:100%;
       align-items:center;
     }
-    .hero-left-controls{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:10px;
-      flex:1 1 auto;
-      min-width:0;
-    }
-    .hero-right-controls{
-      display:flex;
-      gap:10px;
-      align-items:center;
-      flex:0 0 auto;
-    }
-    .round-btn,.mode-btn,.nav-btn{
-      height:58px;
-      border-radius:20px;
+    .round-btn,.mode-btn{
+      height:116px;
+      border-radius:30px;
       border:1.5px solid #d3deec;
       background:#fff;
       color:#13314c;
-      font-size:15px;
+      font-size:32px;
       font-weight:900;
       letter-spacing:-.02em;
       box-shadow:var(--shadow-soft);
@@ -245,19 +233,16 @@
       pointer-events:auto;
       min-width:0;
     }
-    .round-btn,.nav-btn{
-      font-size:26px;
+    .round-btn{
+      font-size:52px;
       display:flex;
       align-items:center;
       justify-content:center;
-      width:58px;
-      flex:0 0 58px;
-      padding:0;
-      line-height:1;
+      width:100%;
     }
     .mode-btn{
       width:100%;
-      padding:0 10px;
+      padding:0 22px;
       white-space:nowrap;
     }
     .mode-btn.active{
@@ -266,30 +251,11 @@
       border-color:var(--blue);
       box-shadow:0 14px 28px rgba(13,99,198,.20);
     }
-    .detail-back-btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      width:64px;
-      height:64px;
-      border-radius:999px;
-      border:1.5px solid #d3deec;
-      background:#fff;
-      color:#13314c;
-      font-size:30px;
-      font-weight:900;
-      box-shadow:var(--shadow-soft);
-      cursor:pointer;
-      position:absolute;
-      right:22px;
-      bottom:24px;
-      z-index:3;
-    }
 
     .main-footnote{
       text-align:center;
       color:#5b6470;
-      font-size:12px;
+      font-size:24px;
       line-height:1.45;
       font-weight:700;
       letter-spacing:-.02em;
@@ -302,12 +268,14 @@
       min-height:100vh;
     }
     #detailPage .detail-wrap{
-      max-width:980px;
+      width:min(96vw,1040px);
+      max-width:1040px;
       margin:0 auto;
-      padding:22px 16px 52px;
+      padding:34px 26px 82px;
       display:flex;
       flex-direction:column;
-      gap:18px;
+      gap:28px;
+      position:relative;
     }
     #detailPage .hero,
     #detailPage .card,
@@ -316,11 +284,11 @@
       width:100%;
       background:#ffffff;
       border:1.5px solid #d9e2ee;
-      border-radius:30px;
+      border-radius:40px;
       box-shadow:0 14px 34px rgba(36,68,110,.08);
     }
     #detailPage .hero{
-      padding:22px 24px 24px;
+      padding:32px 34px 36px;
       position:relative;
       overflow:hidden;
     }
@@ -337,12 +305,12 @@
     }
     #detailPage .brand{
       display:block;
-      margin:-22px -24px 18px;
-      padding:14px 20px;
-      border-radius:30px 30px 0 0;
+      margin:-32px -34px 24px;
+      padding:24px 30px;
+      border-radius:40px 40px 0 0;
       background:linear-gradient(180deg,#082f80 0%, #062a72 100%);
       color:#fff;
-      font-size:17px;
+      font-size:30px;
       font-weight:900;
       letter-spacing:-.02em;
       text-align:center;
@@ -351,7 +319,7 @@
     }
     #detailPage .heroTitle{
       margin:0;
-      font-size:clamp(17px,2vw,22px);
+      font-size:clamp(34px,3vw,44px);
       line-height:1.42;
       letter-spacing:-.035em;
       color:#213d63;
@@ -367,16 +335,15 @@
       font-weight:800;
       line-height:1.5;
     }
-    #detailPage .card{padding:22px 22px 24px}
-    #detailPage .sliderCard{position:relative;}
+    #detailPage .card{padding:34px 34px 40px}
     #detailPage .sliderCard > h3{display:none}
     #detailPage .spec{
       display:flex;
       flex-direction:column;
-      gap:16px;
-      margin-top:14px;
-      margin-bottom:10px;
-      width:min(100%,520px);
+      gap:24px;
+      margin-top:24px;
+      margin-bottom:20px;
+      width:min(100%,760px);
     }
     #detailPage .sliderBlock{display:flex; flex-direction:column; gap:8px}
     #detailPage .sliderTop{
@@ -386,15 +353,15 @@
       gap:12px;
     }
     #detailPage .label{
-      font-size:18px;
+      font-size:32px;
       font-weight:900;
       color:#5f748f;
       letter-spacing:-.03em;
     }
     #detailPage .value{
-      min-width:108px;
+      min-width:180px;
       text-align:right;
-      font-size:18px;
+      font-size:32px;
       font-weight:900;
       color:#156bc4;
       letter-spacing:-.03em;
@@ -405,13 +372,13 @@
       justify-content:space-between;
       padding:0 2px;
       color:#6f8097;
-      font-size:12px;
+      font-size:38px;
       font-weight:900;
       letter-spacing:-.02em;
     }
     #detailPage .visualStage{display:flex; justify-content:center; margin-top:6px}
     #detailPage .visualStack{
-      width:min(100%,580px);
+      width:min(100%,900px);
       display:flex;
       flex-direction:column;
       align-items:center;
@@ -422,12 +389,12 @@
       display:flex;
       flex-direction:column;
       align-items:center;
-      gap:10px;
+      gap:18px;
     }
     #detailPage .eyePanel,
     #detailPage .lensPanel{
       position:relative;
-      width:min(100%,440px);
+      width:min(100%,760px);
       border-radius:34px;
       background:linear-gradient(180deg,#ffffff 0%, #fbfcfe 100%);
       border:1.5px solid #edf2f8;
@@ -436,12 +403,12 @@
       display:flex;
       justify-content:center;
       align-items:center;
-      padding:10px 10px;
+      padding:18px 18px;
     }
     #detailPage .eyeBase,
     #detailPage .lensBase{
       width:100%;
-      max-width:400px;
+      max-width:700px;
       height:auto;
       display:block;
     }
@@ -455,7 +422,7 @@
 
     /* 3. ON/OFF 버튼 우측 하단 이동 + 183개 광학부 위로 */
     #detailPage .compactControl{
-      width:170px;
+      width:260px;
       background:transparent;
       border:none;
       border-radius:0;
@@ -466,19 +433,19 @@
       align-items:flex-end;
       gap:6px;
       position:absolute;
-      right:10px;
-      bottom:8px;
+      right:16px;
+      bottom:14px;
       z-index:5;
     }
    
     #detailPage .compactLabel{
-      font-size:13px;
+      font-size:38px;
       font-weight:900;
       color:#0f5aa6;
       letter-spacing:-.03em;
       line-height:1.1;
       text-align:right;
-      padding:4px 10px;
+      padding:8px 16px;
       background:rgba(255,255,255,.92);
       border:1px solid rgba(217,226,238,.9);
       border-radius:999px;
@@ -487,7 +454,7 @@
 
     
     #detailPage .switchWrap{
-      width:170px;
+      width:260px;
       background:rgba(255,255,255,.96);
       border:1.5px solid #d9e2ee;
       border-radius:999px;
@@ -500,8 +467,8 @@
     #detailPage .pillBtn{
       border:none;
       border-radius:999px;
-      height:38px;
-      font-size:12px;
+      height:58px;
+      font-size:18px;
       font-weight:900;
       letter-spacing:-.02em;
       cursor:pointer;
@@ -516,17 +483,17 @@
     }
 
     #detailPage .messageBox{
-      width:min(100%,520px);
-      border-radius:28px;
+      width:min(100%,760px);
+      border-radius:34px;
       background:linear-gradient(180deg,#f4f8ff 0%, #edf4ff 100%);
       border:1.5px solid #d7e2f1;
       box-shadow:0 10px 24px rgba(36,68,110,.06), inset 0 1px 0 rgba(255,255,255,.95);
-      padding:18px 20px 20px;
+      padding:28px 30px 30px;
       text-align:center;
     }
     #detailPage .messageTitle{
       margin:0;
-      font-size:22px;
+      font-size:38px;
       line-height:1.48;
       font-weight:900;
       color:#234767;
@@ -534,16 +501,16 @@
     }
     #detailPage .messageTitle strong,
     #detailPage .messageTitle .emphasisLine{color:#0f5aa6; font-weight:900}
-    #detailPage .visionCard{padding:16px 18px; border-radius:28px}
+    #detailPage .visionCard{padding:24px 28px; border-radius:34px}
     #detailPage .visionTrigger{
       display:grid;
-      grid-template-columns:1fr 154px;
-      gap:14px;
+      grid-template-columns:1fr 230px;
+      gap:20px;
       align-items:center;
     }
     #detailPage .visionTrigger h3{
       margin:0 0 4px;
-      font-size:26px;
+      font-size:42px;
       line-height:1.04;
       letter-spacing:-.04em;
       color:#213d63;
@@ -552,18 +519,18 @@
     #detailPage .muted{
       color:#6d7e95;
       font-weight:800;
-      font-size:13px;
+      font-size:38px;
       line-height:1.42;
     }
     #detailPage .btn{
       border:1px solid #d9e2ee;
       background:#fff;
-      border-radius:18px;
-      padding:12px 16px;
+      border-radius:24px;
+      padding:18px 20px;
       font-weight:900;
       cursor:pointer;
       color:#234767;
-      font-size:16px;
+      font-size:28px;
     }
     #detailPage .btn.primary{
       background:linear-gradient(180deg,#156bc4 0%, #0f61b4 100%);
@@ -571,25 +538,25 @@
       color:#fff;
       box-shadow:0 10px 22px rgba(18,97,180,.20);
     }
-    #detailPage #openVisionBtn{min-height:82px; white-space:normal; line-height:1.4; font-size:15px}
+    #detailPage #openVisionBtn{min-height:120px; white-space:normal; line-height:1.35; font-size:24px}
     #detailPage .pageFootnote{
       text-align:center;
       color:#73839a;
-      font-size:12px;
+      font-size:22px;
       font-weight:900;
       letter-spacing:-.02em;
       padding-top:2px;
     }
 
     #detailPage .references-space{
-      margin-top:4px;
+      margin-top:8px;
       text-align:left;
       color:#9aa5b5;
-      font-size:10px;
+      font-size:16px;
       line-height:1.55;
       font-weight:700;
       letter-spacing:-.01em;
-      min-height:72px;
+      min-height:120px;
       padding:0 6px 4px;
       white-space:pre-line;
     }
@@ -697,7 +664,7 @@
       background:#fafbfc;
       color:#73839a;
       font-weight:900;
-      font-size:13px;
+      font-size:38px;
       line-height:1.55;
       position:relative;
     }
@@ -748,72 +715,49 @@
       padding:0 8px;
     }
 
-    @media (min-width:1200px){
-      html,body{width:100%; min-height:100%;}
-      .wrap{max-width:none; width:calc(100vw - 120px); padding:34px 60px 28px;}
-      .top-title-box{font-size:42px; padding:24px 30px; border-radius:36px 36px 0 0;}
-      .top-cards{margin-bottom:26px}
-      .menu-card{min-height:154px; padding:28px 32px 24px; border-radius:0 0 36px 36px;}
-      .menu-title{font-size:52px; margin-bottom:14px;}
-      .menu-sub{font-size:28px;}
-      .hero-3d{padding:28px 28px 24px; border-radius:42px;}
-      .hero-viewer{min-height:670px; border-radius:34px;}
-      model-viewer{height:670px;}
-      .powermap-panel{margin-top:22px; padding:0 8px;}
-      .powermap-title{font-size:30px; margin-bottom:14px;}
-      .powermap-label{font-size:20px;}
-      .powermap-row{gap:18px;}
-      .powermap-bar-wrap{height:32px;}
-      .powermap-bar{height:20px;}
-      .powermap-tick{height:16px; width:2px;}
-      .hero-buttons{gap:22px; margin-top:24px;}
-      .hero-left-controls{gap:18px;}
-      .hero-right-controls{gap:14px;}
-      .round-btn,.mode-btn,.nav-btn{height:92px; border-radius:26px; font-size:28px;}
-      .round-btn,.nav-btn{width:92px; flex-basis:92px; font-size:42px;}
-      .mode-btn{padding:0 18px; font-size:30px;}
-      .main-footnote{font-size:24px; line-height:1.35; padding:6px 0 0;}
 
-      #detailPage .detail-wrap{max-width:none; width:calc(100vw - 120px); padding:30px 60px 36px; gap:22px;}
-      #detailPage .hero,#detailPage .card,#detailPage .visionCard,#detailPage .modalCard{border-radius:38px;}
-      #detailPage .hero{padding:28px 32px 30px;}
-      #detailPage .brand{margin:-28px -32px 22px; padding:20px 28px; border-radius:38px 38px 0 0; font-size:30px;}
-      #detailPage .heroTitle{font-size:42px; line-height:1.34; max-width:1320px;}
-      #detailPage .heroTitle .titleNote{font-size:.58em; margin-top:14px;}
-      #detailPage .card{padding:30px 34px 34px;}
-      #detailPage .visualStack{width:min(100%,1320px); gap:18px;}
-      #detailPage .eyePanel,#detailPage .lensPanel{width:min(100%,1020px); padding:18px 20px; border-radius:36px;}
-      #detailPage .eyeBase,#detailPage .lensBase{max-width:940px;}
-      #detailPage .spec{width:min(100%,1120px); gap:22px; margin-top:20px; margin-bottom:12px;}
-      #detailPage .label,#detailPage .value{font-size:34px;}
-      #detailPage input[type="range"]{height:36px;}
-      #detailPage .scale{font-size:22px; padding:0 4px;}
-      #detailPage .messageBox{width:min(100%,1120px); border-radius:34px; padding:28px 40px 30px;}
-      #detailPage .messageTitle{font-size:38px; line-height:1.42;}
-      #detailPage .detail-back-btn{width:88px; height:88px; font-size:42px; right:34px; bottom:34px;}
-      #detailPage .visionCard{padding:24px 28px 24px; border-radius:34px;}
-      #detailPage .visionTrigger{grid-template-columns:1fr 260px; gap:22px;}
-      #detailPage .visionTrigger h3{font-size:44px;}
-      #detailPage .muted{font-size:24px; line-height:1.4;}
-      #detailPage .btn{border-radius:24px; padding:20px 24px; font-size:28px;}
-      #detailPage #openVisionBtn{min-height:128px; font-size:28px;}
-      #detailPage .pageFootnote{font-size:22px; padding-top:4px;}
-      #detailPage .references-space{font-size:16px; min-height:108px; padding:4px 8px 0; line-height:1.5;}
-      #detailPage .compactControl{width:250px; right:18px; bottom:18px; gap:10px;}
-      #detailPage .compactLabel{font-size:20px; padding:8px 14px;}
-      #detailPage .switchWrap{width:250px; padding:4px; gap:4px;}
-      #detailPage .pillBtn{height:52px; font-size:18px;}
-      #detailPage .modalCard{max-width:1640px; padding:30px 32px 26px;}
-      #detailPage .modalClose{right:24px; top:22px;}
-      #detailPage .visionGrid{grid-template-columns:minmax(0,1fr) 460px; gap:24px; margin-top:14px;}
-      #detailPage .screen{min-height:760px; border-radius:28px;}
-      #detailPage .explain{border-radius:24px; padding:22px 22px 24px; font-size:24px; line-height:1.5;}
-      #detailPage .explainTopBar{margin-bottom:16px;}
-      #detailPage .inlineCamBtn{min-width:88px; width:88px; height:88px; border-radius:24px;}
-      #detailPage .inlineCamBtn .cam-icon{width:34px; height:34px;}
-      #detailPage .tagRow{gap:12px; margin-bottom:12px;}
-      #detailPage .tag{padding:10px 18px; font-size:20px;}
-      #detailPage .modalFootnote{font-size:18px; margin-top:16px; padding:0 6px;}
+
+    .icon-btn{
+      height:116px;
+      width:116px;
+      border-radius:32px;
+      border:1.5px solid #d3deec;
+      background:#fff;
+      color:#13314c;
+      font-size:54px;
+      font-weight:900;
+      box-shadow:var(--shadow-soft);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+      -webkit-appearance:none;
+      appearance:none;
+    }
+    .detail-back-wrap{
+      display:flex;
+      justify-content:flex-end;
+      margin-top:-6px;
+      margin-bottom:4px;
+    }
+    #detailBackBtn{
+      height:104px;
+      width:104px;
+      border-radius:50%;
+      border:2px solid #c6d2e3;
+      background:#fff;
+      color:#13314c;
+      font-size:48px;
+      font-weight:900;
+      box-shadow:var(--shadow-soft);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+    }
+    @media (orientation: portrait){
+      .wrap, #detailPage .detail-wrap{ width:min(96vw,1040px); }
+      .hero-viewer, model-viewer{ min-height:1080px; height:1080px; }
     }
 
     @media (max-width:720px){
@@ -834,11 +778,9 @@
       .powermap-bar-wrap{height:20px}
       .powermap-bar{height:13px}
       .powermap-tick{height:11px; width:1.25px}
-      .hero-buttons{gap:8px}
-      .hero-left-controls{gap:8px}
-      .hero-right-controls{gap:8px}
-      .round-btn,.mode-btn,.nav-btn{height:54px; border-radius:18px; font-size:13px}
-      .round-btn,.nav-btn{font-size:23px; width:54px; flex-basis:54px}
+      .hero-buttons{grid-template-columns:60px 1fr 1fr; gap:8px}
+      .round-btn,.mode-btn{height:54px; border-radius:18px; font-size:13px}
+      .round-btn{font-size:23px}
       .main-footnote{font-size:11px}
 
       #detailPage .detail-wrap{padding:16px 12px 42px}
@@ -877,7 +819,7 @@
       }
 
       #detailPage .messageBox{width:min(100%,100%); border-radius:24px; padding:16px 14px 18px; background:linear-gradient(180deg,#f3f8ff 0%, #ebf3ff 100%)}
-      #detailPage .messageTitle{font-size:13px; line-height:1.48}
+      #detailPage .messageTitle{font-size:38px; line-height:1.48}
       #detailPage .visionTrigger{grid-template-columns:1fr 118px; gap:12px}
       #detailPage .visionTrigger h3{font-size:22px}
       #detailPage .muted{font-size:10px; line-height:1.38}
@@ -948,16 +890,11 @@
         </div>
 
         <div class="hero-buttons">
-          <div class="hero-left-controls">
-            <button class="mode-btn active" id="transparentBtn" type="button">투명 렌즈 모드</button>
-            <button class="mode-btn" id="powerBtn" type="button">렌즈 파워 MAP</button>
-          </div>
-          <div class="hero-right-controls">
-            <button class="round-btn" id="resetBtn" type="button" aria-label="Back">↺</button>
-            <button class="nav-btn" id="backBtn" type="button" aria-label="뒤로가기">←</button>
-          </div>
+          <button class="mode-btn active" id="transparentBtn" type="button">투명 렌즈 모드</button>
+          <button class="mode-btn" id="powerBtn" type="button">렌즈 파워 MAP</button>
+          <button class="icon-btn" id="resetBtn" type="button">↺</button>
+          <button class="icon-btn" id="mainBackBtn" type="button" aria-label="뒤로가기">←</button>
         </div>
-        <button class="detail-back-btn" id="detailBackBtn" type="button" aria-label="뒤로가기">←</button>
       </section>
 
       <div class="main-footnote">해당 이미지는 이해를 돕기 위한 가상 이미지입니다. KR_2026_287</div>
@@ -966,6 +903,7 @@
 
   <section id="detailPage" class="page" aria-hidden="true">
     <div class="detail-wrap">
+      <div class="detail-back-wrap"><button id="detailBackBtn" type="button" aria-label="뒤로가기">←</button></div>
       <svg width="0" height="0" style="position:absolute">
         <filter id="fishbowlFilter" x="-20%" y="-20%" width="140%" height="140%">
           <feTurbulence type="fractalNoise" baseFrequency="0.008" numOctaves="1" seed="2" result="noise"></feTurbulence>
@@ -1101,14 +1039,14 @@
   <script>
     const viewer = document.getElementById('lensViewer');
     const resetBtn = document.getElementById('resetBtn');
-    const backBtn = document.getElementById('backBtn');
-    const detailBackBtn = document.getElementById('detailBackBtn');
     const transparentBtn = document.getElementById('transparentBtn');
     const powerBtn = document.getElementById('powerBtn');
     const card1 = document.getElementById('card1');
     const powermapPanel = document.getElementById('powermapPanel');
     const mainPage = document.getElementById('mainPage');
     const detailPage = document.getElementById('detailPage');
+    const mainBackBtn = document.getElementById('mainBackBtn');
+    const detailBackBtn = document.getElementById('detailBackBtn');
 
     const MODE_CONFIG = {
       transparent: { src: 'lens_clear.glb', panel: 'none' },
@@ -1196,29 +1134,22 @@
     }
 
     function resetViewer(){ applyView(initialViewByMode[currentMode]); }
-    function goBackAction(){
-      if (visionModal.classList.contains('open')) {
-        closeVisionModal();
-        return;
-      }
-      if (location.hash === '#card1') {
-        if (history.length > 1) {
-          history.back();
-          setTimeout(() => {
-            if (location.hash === '#card1') location.hash = '';
-          }, 0);
-        } else {
-          location.hash = '';
-        }
-        return;
-      }
-      if (history.length > 1) history.back();
-    }
     transparentBtn.addEventListener('click', () => setMode('transparent'));
     powerBtn.addEventListener('click', () => setMode('power'));
     resetBtn.addEventListener('click', resetViewer);
-    backBtn.addEventListener('click', goBackAction);
-    detailBackBtn.addEventListener('click', goBackAction);
+    mainBackBtn.addEventListener('click', () => {
+      if (window.history.length > 1) history.back();
+      else location.hash = '';
+    });
+    detailBackBtn.addEventListener('click', () => {
+      if (visionModal.classList.contains('open')) {
+        visionModal.classList.remove('open');
+        document.body.classList.remove('page-lock');
+        stopCamera();
+      } else {
+        location.hash = '';
+      }
+    });
 
     const sphereSlider = document.getElementById('sphereSlider');
     const addSlider = document.getElementById('addSlider');
