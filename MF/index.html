@@ -169,7 +169,7 @@
     }
     .powermap-bar-wrap{
       position:relative;
-      height:32px;
+      height:44px;
       display:flex;
       align-items:center;
     }
@@ -404,15 +404,7 @@
       color:#156bc4;
       letter-spacing:-.03em;
     }
-    #detailPage input[type="range"]{
-      width:100%;
-      margin:0;
-      height:64px;
-      accent-color:#1e88f5;
-      background:transparent;
-      -webkit-appearance:none;
-      appearance:none;
-    }
+    #detailPage input[type="range"]{width:100%; margin:0; accent-color:#1e88f5}
     #detailPage .scale{
       display:flex;
       justify-content:space-between;
@@ -614,29 +606,18 @@
       display:none;
       align-items:center;
       justify-content:center;
-      padding:10px;
+      padding:12px;
       z-index:1000;
     }
     #detailPage .modalBack.open{display:flex}
     #detailPage .modalCard{
-      width:calc(100vw - 32px);
-      max-width:calc(100vw - 32px);
-      padding:24px 24px 22px;
+      width:min(1200px, calc(100vw - 20px));
+      max-width:min(1200px, calc(100vw - 20px));
+      padding:24px 24px 20px;
       position:relative;
       border-radius:34px;
-      box-sizing:border-box;
     }
-    #detailPage .modalClose{
-      position:absolute;
-      right:18px;
-      top:18px;
-      min-width:104px;
-      height:58px;
-      border-radius:999px;
-      font-size:24px;
-      padding:0 22px;
-      z-index:3;
-    }
+    #detailPage .modalClose{position:absolute; right:18px; top:18px; min-width:104px; height:58px; border-radius:999px; font-size:24px; padding:0 22px}
     #detailPage .visionGrid{
       display:grid;
       grid-template-columns:1fr;
@@ -647,8 +628,8 @@
     #detailPage .screen{
       position:relative;
       width:100%;
-      aspect-ratio:16 / 8.8;
-      min-height:520px;
+      aspect-ratio:16 / 9.5;
+      min-height:430px;
       border:1px solid #d9e2ee;
       border-radius:24px;
       overflow:hidden;
@@ -657,7 +638,6 @@
       --blur-opacity:0;
       --clear-stop:55%;
       --blur-start:72%;
-      box-sizing:border-box;
     }
     #detailPage .screen video,
     #detailPage .screen img{width:100%; height:100%; object-fit:cover; display:block}
@@ -729,20 +709,19 @@
       font-size:15px;
       line-height:1.55;
       position:relative;
-      box-sizing:border-box;
     }
     #detailPage .explain strong{color:#234767}
     #detailPage .explainTopBar{display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:10px}
     #detailPage .inlineCamBtn{
       margin:0;
-      min-width:56px;
-      width:56px;
-      height:56px;
+      min-width:52px;
+      width:52px;
+      height:52px;
       padding:0;
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      border-radius:18px;
+      border-radius:16px;
     }
     #detailPage .inlineCamBtn .cam-icon{
       width:42px;
@@ -902,7 +881,7 @@
     #mainPage .powermap-label{font-size:22px;}
     #mainPage .powermap-bar-wrap{height:48px;}
     #mainPage .powermap-bar{
-      height:32px;
+      height:44px;
       border-width:3.5px;
     }
     #mainPage .powermap-tick{height:30px; width:5px;}
@@ -1018,40 +997,35 @@
       font-size:32px;
     }
     #detailPage input[type="range"]{
-      height:64px;
+      height:100px;
       accent-color:#1e88f5;
-      background:transparent;
-      -webkit-appearance:none;
-      appearance:none;
     }
     #detailPage input[type="range"]::-webkit-slider-runnable-track{
-      height:18px;
+      height:44px;
       border-radius:999px;
-      background:linear-gradient(90deg,#2d8cff 0%, #2d8cff 50%, #dfe4eb 50%, #dfe4eb 100%);
     }
     #detailPage input[type="range"]::-webkit-slider-thumb{
       -webkit-appearance:none;
       appearance:none;
-      width:26px;
-      height:26px;
+      width:52px;
+      height:52px;
       border-radius:50%;
       background:#fff;
-      border:2px solid #d7deea;
+      border:4px solid #1e88f5;
       margin-top:-4px;
-      box-shadow:0 4px 10px rgba(30,136,245,.16);
+      box-shadow:0 4px 10px rgba(30,136,245,.18);
     }
     #detailPage input[type="range"]::-moz-range-track{
-      height:18px;
+      height:44px;
       border-radius:999px;
-      background:#dfe4eb;
     }
     #detailPage input[type="range"]::-moz-range-thumb{
-      width:26px;
-      height:26px;
+      width:44px;
+      height:44px;
       border-radius:50%;
       background:#fff;
-      border:2px solid #d7deea;
-      box-shadow:0 4px 10px rgba(30,136,245,.16);
+      border:4px solid #1e88f5;
+      box-shadow:0 4px 10px rgba(30,136,245,.18);
     }
     #detailPage .scale{
       font-size:22px;
@@ -1097,38 +1071,14 @@
       min-height:auto;
       padding:0 4px 12px;
     }
-    }
 
-  
-    /* clean final sizing */
-    #detailPage .modalCard{
-      width:calc(100vw - 32px) !important;
-      max-width:calc(100vw - 32px) !important;
-    }
-    #detailPage .screen{
-      aspect-ratio:16 / 8.8 !important;
-      min-height:520px !important;
-    }
-    #detailPage input[type="range"]{
-      height:64px !important;
-      transform:none !important;
-    }
-    #detailPage input[type="range"]::-webkit-slider-runnable-track{
-      height:18px !important;
-    }
-    #detailPage input[type="range"]::-webkit-slider-thumb{
-      width:26px !important;
-      height:26px !important;
-      border-radius:50% !important;
-      margin-top:-4px !important;
-    }
-    #detailPage input[type="range"]::-moz-range-track{
-      height:18px !important;
-    }
-    #detailPage input[type="range"]::-moz-range-thumb{
-      width:26px !important;
-      height:26px !important;
-      border-radius:50% !important;
+
+    /* final popup/layout tuning */
+    @media (max-width: 1200px){
+      #detailPage .modalCard{
+        width:min(1200px, calc(100vw - 20px));
+        max-width:min(1200px, calc(100vw - 20px));
+      }
     }
 
   </style>
@@ -1292,8 +1242,8 @@
     <div class="modalBack" id="visionModal">
       <div class="modalCard">
         <button class="btn modalClose" id="closeVisionBtn" type="button">닫기</button>
-        <h3 style="font-size:28px; margin:4px 0 10px; line-height:1.1;">Vision Simulation</h3>
-        <div class="muted" style="font-size:15px; line-height:1.45; margin-bottom:10px;">동공과 광학부 사이즈에 따른 시야 시뮬레이션</div>
+        <h3 style="font-size:30px; margin:4px 0 10px; line-height:1.1;">Vision Simulation</h3>
+        <div class="muted" style="font-size:16px; line-height:1.45; margin-bottom:10px;">동공과 광학부 사이즈에 따른 시야 시뮬레이션</div>
 
         <div class="visionGrid">
           <div class="screen" id="screen">
