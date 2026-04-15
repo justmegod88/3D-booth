@@ -496,160 +496,178 @@
       }
     }
   
-/* ===== KIOSK SIZE ADJUST ONLY / NO CROP ===== */
-html,body{
-  width:100%;
-  min-height:100%;
-}
-
-/* 기본 모바일 유지 */
-.app{
-  width:100%;
-  max-width:430px;
-  min-height:100vh;
-}
-
-/* 세로형 키오스크에서만 크게 */
+/* ===== KIOSK FULL-FIT VERSION ===== */
 @media screen and (min-width: 900px) and (min-height: 1400px) and (orientation: portrait){
-  body{
-    justify-content:center;
-    align-items:flex-start;
+  html, body{
+    width:100%;
+    height:100%;
+    min-height:100%;
+    overflow:hidden;
     background:var(--acuvue-bg);
   }
 
+  body{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+  }
+
   .app{
-    max-width:100vw !important;
     width:100vw !important;
+    max-width:100vw !important;
     min-height:100vh !important;
+    height:100vh !important;
   }
 
   .wrap{
-    padding:42px 40px 44px !important;
+    width:min(1020px, calc(100vw - 44px)) !important;
+    height:100vh !important;
+    margin:0 auto !important;
+    padding:22px 0 20px !important;
+    display:flex !important;
+    flex-direction:column !important;
   }
 
   .hero{
-    padding:8px 16px 0 !important;
-    margin-bottom:28px !important;
+    padding:0 4px !important;
+    margin-bottom:14px !important;
+    flex:0 0 auto;
   }
 
   .hero-top{
-    min-height:72px !important;
-    margin-bottom:24px !important;
+    min-height:56px !important;
+    margin-bottom:14px !important;
   }
 
   .hero-kicker{
-    height:72px !important;
-    padding:0 54px !important;
-    font-size:26px !important;
+    height:56px !important;
+    padding:0 34px !important;
+    font-size:18px !important;
     border-radius:999px !important;
   }
 
   .search-fab{
-    width:72px !important;
-    height:72px !important;
-    border-radius:22px !important;
+    width:56px !important;
+    height:56px !important;
+    border-radius:16px !important;
   }
 
   .search-fab svg{
-    width:30px !important;
-    height:30px !important;
+    width:22px !important;
+    height:22px !important;
   }
 
   .hero-title{
-    font-size:58px !important;
-    line-height:1.18 !important;
+    font-size:clamp(42px, 4.8vw, 54px) !important;
+    line-height:1.12 !important;
   }
 
   .hero-desc{
-    margin-top:18px !important;
-    font-size:28px !important;
-    line-height:1.45 !important;
+    margin-top:10px !important;
+    font-size:clamp(18px, 2.3vw, 24px) !important;
+    line-height:1.35 !important;
   }
 
   .cards{
-    gap:28px !important;
-    margin-top:28px !important;
+    flex:1 1 auto !important;
+    display:flex !important;
+    flex-direction:column !important;
+    gap:16px !important;
+    margin-top:14px !important;
+    min-height:0 !important;
+  }
+
+  .card{
+    flex:1 1 0 !important;
+    min-height:0 !important;
   }
 
   .card-shell{
-    min-height:460px !important;
-    border-radius:44px !important;
-    padding:34px 34px 34px !important;
+    height:100% !important;
+    min-height:0 !important;
+    border-radius:36px !important;
+    padding:28px 28px 24px !important;
+    display:flex !important;
+    flex-direction:column !important;
+    justify-content:flex-start !important;
   }
 
   .card-index{
-    min-width:98px !important;
-    height:58px !important;
-    padding:0 24px !important;
-    font-size:28px !important;
-    margin-bottom:24px !important;
+    min-width:78px !important;
+    height:48px !important;
+    padding:0 18px !important;
+    font-size:22px !important;
+    margin-bottom:16px !important;
   }
 
   .card-copy{
-    max-width:58% !important;
-    padding-bottom:48px !important;
+    max-width:56% !important;
+    padding-bottom:0 !important;
   }
 
   .card-title,
   .card-title.card-title-long{
-    font-size:66px !important;
+    font-size:clamp(48px, 5.6vw, 60px) !important;
     line-height:1.02 !important;
   }
 
   .card-sub{
-    margin-top:18px !important;
-    font-size:28px !important;
-    line-height:1.35 !important;
+    margin-top:12px !important;
+    font-size:clamp(20px, 2.2vw, 24px) !important;
+    line-height:1.32 !important;
   }
 
   .card-packshot{
-    right:30px !important;
-    width:320px !important;
-    height:300px !important;
+    right:18px !important;
+    top:50% !important;
+    transform:translateY(-50%) !important;
+    width:min(29vw, 300px) !important;
+    height:min(28vw, 290px) !important;
   }
 
   .card-packshot::before{
-    border-radius:30px !important;
+    inset:10px 10px 12px 10px !important;
+    border-radius:24px !important;
   }
 
   .card-arrow{
-    right:28px !important;
-    bottom:24px !important;
-    gap:12px !important;
-    padding:16px 24px 16px 18px !important;
-    font-size:26px !important;
-    border-radius:999px !important;
+    right:18px !important;
+    bottom:18px !important;
+    gap:10px !important;
+    padding:14px 20px 14px 15px !important;
+    font-size:20px !important;
   }
 
   .card-arrow::before{
-    width:38px !important;
-    height:38px !important;
-    font-size:18px !important;
-    flex:0 0 38px !important;
+    width:30px !important;
+    height:30px !important;
+    flex:0 0 30px !important;
+    font-size:14px !important;
   }
 
   .footer-note{
-    margin-top:26px !important;
-    font-size:20px !important;
-    line-height:1.45 !important;
+    flex:0 0 auto;
+    margin-top:10px !important;
+    font-size:15px !important;
+    line-height:1.35 !important;
   }
 
   .search-modal{
-    padding:56px 28px 28px !important;
+    padding:34px 20px 20px !important;
   }
 
   .search-panel{
     width:min(920px, 100%) !important;
     height:min(86vh, 1560px) !important;
-    border-radius:34px !important;
+    border-radius:28px !important;
   }
 
   .search-close{
-    top:18px !important;
-    right:18px !important;
-    width:56px !important;
-    height:56px !important;
-    font-size:32px !important;
+    top:14px !important;
+    right:14px !important;
+    width:48px !important;
+    height:48px !important;
+    font-size:28px !important;
   }
 }
 
