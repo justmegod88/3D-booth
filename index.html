@@ -493,7 +493,15 @@
       const baseH = 1920;
       const vw = window.innerWidth;
       const vh = window.innerHeight;
-      const scale = Math.min(vw / baseW, vh / baseH);
+
+      // 세로형 키오스크 기준: 높이를 우선 꽉 채우고,
+      // 혹시 가로가 넘치면 그때만 가로에 맞춰 축소
+      let scale = vh / baseH;
+      const scaledWidth = baseW * scale;
+      if (scaledWidth > vw) {
+        scale = vw / baseW;
+      }
+
       stage.style.transform = `translateX(-50%) scale(${scale})`;
     }
 
