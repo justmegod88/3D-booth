@@ -900,6 +900,140 @@
       padding:4px 10px 0;
     }
 
+    /* detail page horizontal-fit + vertical-scroll override */
+    #detailPage{
+      height:1920px;
+      min-height:1920px;
+      overflow-y:auto;
+      overflow-x:hidden;
+      -webkit-overflow-scrolling:touch;
+    }
+    #detailPage .detail-wrap{
+      max-width:none;
+      width:100%;
+      padding:24px 22px 90px;
+      gap:20px;
+    }
+    #detailPage .hero{
+      padding:28px 30px 30px;
+    }
+    #detailPage .brand{
+      margin:-28px -30px 20px;
+      padding:18px 24px;
+      font-size:22px;
+    }
+    #detailPage .detail-back-btn{
+      width:86px;
+      height:86px;
+      top:24px;
+      right:20px;
+      font-size:40px;
+    }
+    #detailPage .heroTitle{
+      max-width:none;
+      font-size:36px;
+      line-height:1.42;
+    }
+    #detailPage .heroTitle .titleNote{
+      font-size:.52em;
+      margin-top:12px;
+    }
+    #detailPage .card{
+      padding:28px 28px 30px;
+    }
+    #detailPage .visualStack{
+      width:min(100%, 960px);
+      gap:14px;
+    }
+    #detailPage .imagePair{
+      gap:14px;
+    }
+    #detailPage .eyePanel,
+    #detailPage .lensPanel{
+      width:min(100%, 760px);
+      padding:16px 16px;
+      border-radius:34px;
+    }
+    #detailPage .eyeBase,
+    #detailPage .lensBase{
+      max-width:700px;
+    }
+    #detailPage .compactControl{
+      width:196px;
+      right:14px;
+      bottom:14px;
+      gap:8px;
+    }
+    #detailPage .compactLabel{
+      font-size:15px;
+      padding:5px 12px;
+    }
+    #detailPage .switchWrap{
+      width:196px;
+      padding:4px;
+      gap:4px;
+    }
+    #detailPage .pillBtn{
+      height:44px;
+      font-size:14px;
+    }
+    #detailPage .spec{
+      width:min(100%, 820px);
+      gap:20px;
+      margin-top:12px;
+    }
+    #detailPage .label,
+    #detailPage .value{
+      font-size:28px;
+    }
+    #detailPage input[type="range"]{
+      height:30px;
+    }
+    #detailPage .scale{
+      font-size:16px;
+      padding:2px 2px 0;
+    }
+    #detailPage .messageBox{
+      width:min(100%, 820px);
+      padding:22px 24px 24px;
+      border-radius:26px;
+    }
+    #detailPage .messageTitle{
+      font-size:30px;
+      line-height:1.5;
+    }
+    #detailPage .visionCard{
+      padding:20px 22px;
+      border-radius:28px;
+    }
+    #detailPage .visionTrigger{
+      grid-template-columns:1fr 220px;
+      gap:20px;
+    }
+    #detailPage .visionTrigger h3{
+      font-size:34px;
+      margin:0 0 6px;
+    }
+    #detailPage .muted{
+      font-size:18px;
+      line-height:1.45;
+    }
+    #detailPage #openVisionBtn{
+      min-height:108px;
+      font-size:24px;
+      border-radius:22px;
+    }
+    #detailPage .pageFootnote{
+      font-size:16px;
+      padding-top:0;
+    }
+    #detailPage .references-space{
+      font-size:11px;
+      line-height:1.5;
+      min-height:auto;
+      padding:0 4px 12px;
+    }
+
   </style>
 </head>
 <body>
