@@ -495,7 +495,35 @@
         border-radius:20px;
       }
     }
-  </style>
+  
+/* ===== KIOSK OVERRIDE ===== */
+html, body{
+  height:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#000;
+}
+
+.app{
+  max-width:none !important;
+  width:1080px !important;
+  height:1920px !important;
+}
+
+/* 전체 확대 (디자인 유지하면서 키움) */
+.wrap{
+  transform: scale(1.6);
+  transform-origin: top center;
+  width: 625px;
+  margin: 0 auto;
+}
+
+.card-title{ font-size:42px !important; }
+.card-sub{ font-size:18px !important; }
+.card-arrow{ font-size:16px !important; padding:14px 18px !important; }
+
+</style>
 </head>
 <body>
   <main class="app">
